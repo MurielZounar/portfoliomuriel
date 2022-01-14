@@ -1,0 +1,854 @@
+/* DEFAULT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* VARIABLES */
+:root {
+  --header-height: 4.5rem;
+  --base-color: hsl(275, 61%, 50%);
+  --base-color-second: hsl(275, 65%, 88%);
+  --body-color: hsl(0 0% 10%);
+  --body-color-alt: rgb(67, 67, 67);
+  --title-color: hsl(275, 45%, 50%);
+  --title-color-second: hsl(154, 100%, 33%);
+  --text-color: hsl(0, 0%, 85%);
+  --skills-color: hsl(0, 0%, 17%);
+  --skills-color-second: hsl(0, 0%, 48%);
+
+  /* FONT */
+  --font-name: 'Heebo', sans-serif;
+
+  /* FONT SIZE*/
+  --title-font-size: 2.25rem;
+  --subtitle-font-size: 1.75rem;
+  --text-font-size: 1rem;
+}
+
+/* LAYOUT */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 var(--text-font-size) var(--font-name);
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  margin-top: var(--header-height);
+}
+
+.title {
+  font: 700 var(--title-font-size) var(--font-name);
+  color: var(--title-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.subtitle {
+  font: 500 var(--subtitle-font-size) var(--font-name);
+  color: var(--title-color-second);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+/* HEADER */
+#header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid var(--base-color);
+  background: var(--title-color-second);
+  display: flex;
+}
+
+#header.scroll {
+  box-shadow: 0px 0px 12px hsla(275, 61%, 50%, 0.316);
+}
+
+/* LOGO */
+
+.logo {
+  font: 700 2rem var(--font-name);
+  color: var(--text-color);
+}
+
+.logo span {
+  color: var(--title-color);
+}
+
+/* NAVIGATION */
+nav {
+  width: 100%;
+  height: var(--header-height);
+  background: var(--title-color-second);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--title-color-second);
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--title-color-second);
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+  transition: 0.3s;
+}
+
+nav .menu ul {
+  display: none;
+}
+
+/* Mostrar Menu */
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
+  place-content: center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+/* Fim Mostrar Menu */
+
+/* Toggle Menu*/
+.menu-toggle {
+  color: var(--title-color);
+  font-size: var(--text-font-size);
+  cursor: pointer;
+}
+
+nav .icon-close {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+  transition: 0.3s;
+}
+
+nav.show div.icon-close {
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
+  transform: rotate(180deg);
+}
+
+nav div.icon-close:hover {
+  animation: closeRotating 1s infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-name: closeRotating;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  transition: 0.2s;
+}
+/* Fim Toggle Menu*/
+
+/* HOME */
+#home .container {
+  margin: 0;
+}
+
+#home .image {
+  display: flex;
+  place-content: center;
+}
+
+#home .image img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 1.25rem;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#home .text .hello {
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+}
+
+#home strong {
+  color: var(--title-color-second);
+}
+
+.hello {
+  display: flex;
+}
+
+.hello span {
+  font-size: var(--title-font-size);
+}
+
+.hand {
+  animation: shakingHand 0.4s infinite;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-name: shakingHand;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+/* WHO I AM */
+#me .container {
+  margin: 0;
+}
+
+#me .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+#me .text .title {
+  margin-bottom: 2rem;
+}
+
+#me .text p {
+  margin-bottom: 2rem;
+}
+
+#me .image {
+  display: flex;
+  place-content: center;
+}
+
+#me .image img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 1.25rem;
+}
+
+/* SOMETHINGS */
+#somethings .container {
+  margin: 0;
+}
+
+#somethings .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#somethings .text .title {
+  margin-bottom: 2rem;
+}
+
+#wife {
+  display: flex;
+  place-content: center;
+}
+
+#wife img {
+  width: 25rem;
+  height: 35rem;
+  clip-path: circle();
+}
+
+#family {
+  display: flex;
+  place-content: center;
+}
+
+#family img {
+  width: 25rem;
+  height: 12.5;
+  border-radius: 1.25rem;
+}
+
+#dogs {
+  display: flex;
+  place-content: center;
+}
+
+#dogs img {
+  width: 25rem;
+  height: 15rem;
+  border-radius: 1.25rem;
+}
+
+#somethings .text p {
+  margin-bottom: 2rem;
+}
+
+/* ACADEMIC */
+#academic .container {
+  margin: 0;
+}
+
+#academic .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#academic .text p {
+  margin-bottom: 2rem;
+}
+
+/* PROFESSIONAL */
+#professional .container {
+  margin: 0;
+}
+
+#professional .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#professional .text p {
+  margin-bottom: 2rem;
+}
+
+#professional .button {
+  width: 100%;
+  text-align: center;
+}
+
+#professional .button a {
+  margin-left: 2rem;
+  width: 100%;
+  font: 400 var(--text-font-size) var(--font-name);
+  color: var(--text-color);
+  background-color: var(--title-color);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: color 0.3s;
+}
+
+#professional .button a:hover {
+  background-color: var(--title-color-second);
+  color: var(--body-color);
+  cursor: pointer;
+}
+
+/* PROGRESS */
+#skills .hardSkills {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px hsla(275, 61%, 50%, 0.5);
+  border-bottom: 0.25rem solid var(--title-color-second);
+  border-radius: 0.25rem 0.25rem 0 0;
+  place-content: center;
+  margin-bottom: 3rem;
+}
+
+#skills .title {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+#skills .softTitle {
+  color: var(--title-color-second);
+}
+
+#skills .softSkills .softBar {
+  background-color: var(--title-color-second);
+}
+
+#skills .softSkills .softDescription {
+  color: var(--title-color);
+}
+
+#skills .softSkills {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px hsla(154, 100%, 33%, 0.5);
+  border-bottom: 0.25rem solid var(--title-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  place-content: center;
+  margin-bottom: 3rem;
+}
+
+#skills .softSkills .title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+#skills .skillDescription {
+  font-size: 1rem;
+  color: var(--title-color-second);
+  margin-bottom: -2rem;
+}
+
+#skills .bar {
+  width: 20.25rem;
+  height: 1.56rem;
+  background: var(--body-color-alt);
+  border-radius: 0.375rem;
+}
+.bar .progressBar {
+  height: 100%;
+  background: var(--base-color);
+  border-radius: 0.375rem;
+}
+
+/* - Hard Skills*/
+
+#vb6 {
+  visibility: visible;
+  opacity: 1;
+  width: 70%;
+}
+
+#sql {
+  width: 70%;
+}
+
+#cSharp {
+  width: 20%;
+}
+
+#html {
+  width: 40%;
+}
+
+#css {
+  width: 35%;
+}
+
+#js {
+  width: 30%;
+}
+
+/* - Soft Skills*/
+#resiliencia {
+  width: 70%;
+}
+
+#flexibilidade {
+  width: 80%;
+}
+
+#criatividade {
+  width: 85%;
+}
+
+#comunicacao {
+  width: 95%;
+}
+
+#lideranca {
+  width: 65%;
+}
+
+#adaptacao {
+  width: 90%;
+}
+
+/* FOOTER */
+footer {
+  background: var(--base-color);
+}
+
+footer .copyright {
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer i {
+  font-size: 1.875rem;
+  color: var(--text-color);
+}
+
+footer .social {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+footer .social a {
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  transform: translateY(-8px);
+}
+
+#instagram:hover {
+  color: hsl(344, 100%, 73%);
+}
+
+#facebook:hover {
+  color: hsl(216, 64%, 55%);
+}
+
+#linkedin:hover {
+  color: hsl(216, 64%, 55%);
+}
+
+#github:hover {
+  color: hsl(0, 0%, 24%);
+}
+
+/* BACK TO TOP */
+.back-to-top {
+  background: var(--title-color-second);
+  color: var(--body-color);
+  font-size: 1.5rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1.5rem;
+  padding: 0.8rem;
+  clip-path: circle();
+  line-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ANIMATIONS */
+
+@keyframes shakingHand {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes closeRotating {
+  from {
+    transform: rotate(0deg);
+    color: var(--title-color-second);
+  }
+
+  to {
+    transform: rotate(180deg);
+    color: var(--title-color-second);
+  }
+}
+
+/* RESPONSIVIDADE */
+
+/* MEDIA QUERYS */
+
+/* Large Devices: 992px > */
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.625rem;
+    --subtitle-font-size: 2.125rem;
+    --text-font-size: 1.125rem;
+  }
+}
+
+/* Extra Large: 1200px > */
+@media (min-width: 1200px) {
+  :root {
+    --title-font-size: 2.875rem;
+    --subtitle-font-size: 2.5rem;
+    --text-font-size: 1.5rem;
+  }
+
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 6rem 0;
+  }
+
+  /*- Menu -*/
+  nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 700 var(--text-font-size) var(--font-name);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  nav ul li a:hover {
+    color: var(--text-color);
+  }
+
+  nav ul li a::after {
+    background: var(--text-color);
+    bottom: -1rem;
+  }
+
+  /*- Home -*/
+  #home .container {
+    grid-auto-flow: column;
+    width: fit-content;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text .hello {
+    justify-content: left;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 30rem;
+    text-align: left;
+  }
+
+  /*- Me -*/
+  #me .container {
+    grid-auto-flow: column;
+    width: fit-content;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #me .text {
+    text-align: left;
+  }
+
+  /*- Somethings -*/
+  #somethings .container {
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  /* Wife */
+
+  #somethings .myWife {
+    margin: 2rem auto;
+    display: flex;
+    gap: 10rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #somethings .myWife .text {
+    order: 1;
+    text-align: right;
+    max-width: 30rem;
+  }
+
+  #somethings .myWife .text .title {
+    text-align: center;
+  }
+
+  #somethings .myWife .image {
+    order: 0;
+  }
+
+  /* Family */
+
+  #somethings .myFamily {
+    margin: 2rem auto;
+    display: flex;
+    gap: 10rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #somethings .myFamily .text {
+    order: 0;
+    text-align: left;
+    max-width: 30rem;
+  }
+
+  #somethings .myFamily .image {
+    order: 1;
+  }
+
+  /* Dogs */
+  #somethings .dogs {
+    margin: 2rem auto;
+    display: flex;
+    gap: 10rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #somethings .dogs .text {
+    order: 1;
+    text-align: right;
+    max-width: 30rem;
+  }
+
+  #somethings .dogs .image {
+    order: 0;
+  }
+
+  /*- ACADEMIC -*/
+  #academic .container {
+    grid-auto-flow: column;
+    width: fit-content;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #academic .text {
+    text-align: left;
+  }
+
+  /*- PROFESSIONAL -*/
+  #professional .container {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #professional .text {
+    text-align: left;
+  }
+
+  #professional .button {
+    text-align: left;
+  }
+
+  /*- SKILLS -*/
+  #skills .container {
+    margin: 0 auto;
+  }
+
+  #skills .title {
+    text-align: center;
+  }
+
+  #skills .hardSkills {
+    grid-template-columns: 4fr 4fr;
+  }
+
+  #skills .bar,
+  #skills .skillDescription {
+    margin: 0 auto;
+  }
+
+  #skills .softSkills {
+    grid-template-columns: 4fr 4fr;
+  }
+
+  #skills .skillDescription {
+    font-size: 1rem;
+    color: var(--title-color-second);
+    margin-bottom: -2rem;
+  }
+
+  #skills .bar {
+    width: 20.25rem;
+    height: 1.56rem;
+    background: var(--body-color-alt);
+    border-radius: 0.375rem;
+  }
+  .bar .progressBar {
+    height: 100%;
+    background: var(--base-color);
+    border-radius: 0.375rem;
+  }
+}
+
+/* Large Devices: 1023px > */
+
+/* Medium Devices: 767px > */
