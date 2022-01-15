@@ -1,4 +1,4 @@
-/* Abre e fecha menu */
+/* OPEN/CLOSE MENU */
 const nav = document.querySelector('#header nav')
 const menuToggle = document.querySelectorAll('nav .menu-toggle')
 
@@ -8,7 +8,7 @@ for (const element of menuToggle) {
   })
 }
 
-/* Esconder Menu ao clicar em uma das opções */
+/* HIDE MENU WHEN CLICKING ONE OF THE OPTIONS */
 const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
@@ -17,7 +17,7 @@ for (const link of links) {
   })
 }
 
-/* Aplicar sombra do Header da página quando der scroll */
+/* APPLY SHADOW IN THE PAGE HEADER WHEN SCROLL */
 
 function headerShadowWhenScroll() {
   const header = document.querySelector('#header')

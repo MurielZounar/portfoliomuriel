@@ -86,6 +86,23 @@ main {
   margin-bottom: 1rem;
 }
 
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(275, 61%, 50%, 0.34) 0%,
+    rgb(126, 126, 126) 100%
+  );
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    rgb(126, 126, 126) 0% hsla(275, 61%, 50%, 0.34) 100%
+  );
+}
+
 /* HEADER */
 #header {
   width: 100%;
@@ -412,6 +429,7 @@ nav div.icon-close:hover {
 
 /* PROGRESS */
 #skills .hardSkills {
+  width: 100%;
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px hsla(275, 61%, 50%, 0.5);
   border-bottom: 0.25rem solid var(--title-color-second);
@@ -438,6 +456,7 @@ nav div.icon-close:hover {
 }
 
 #skills .softSkills {
+  width: 100%;
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px hsla(154, 100%, 33%, 0.5);
   border-bottom: 0.25rem solid var(--title-color);
