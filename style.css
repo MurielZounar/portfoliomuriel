@@ -433,7 +433,6 @@ nav div.icon-close:hover {
 }
 
 #skills .hardSkills {
-  width: 90%;
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px hsla(275, 61%, 50%, 0.5);
   border-bottom: 0.25rem solid var(--title-color-second);
@@ -460,7 +459,6 @@ nav div.icon-close:hover {
 }
 
 #skills .softSkills {
-  width: 90%;
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px hsla(154, 100%, 33%, 0.5);
   border-bottom: 0.25rem solid var(--title-color);
