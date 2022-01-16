@@ -99,7 +99,8 @@ main {
   height: 1px;
   background: linear-gradient(
     270deg,
-    rgb(126, 126, 126) 0% hsla(275, 61%, 50%, 0.34) 100%
+    rgb(126, 126, 126) 0%,
+    hsla(275, 61%, 50%, 0.34) 100%
   );
 }
 
@@ -286,7 +287,6 @@ nav div.icon-close:hover {
   animation: shakingHand 0.4s infinite;
   animation-duration: 0.4s;
   animation-timing-function: ease-in-out;
-  animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-name: shakingHand;
   animation-direction: alternate;
@@ -610,6 +610,23 @@ footer .social a:hover {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+
+/* BLOG */
+
+#metaverse .image {
+  width: 27rem;
+  height: auto;
+}
+
+#metaverse .subtitle {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+#metaverse p a {
+  color: var(--title-color);
+  cursor: pointer;
 }
 
 /* ANIMATIONS */
