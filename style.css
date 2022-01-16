@@ -428,6 +428,9 @@ nav div.icon-close:hover {
 }
 
 /* PROGRESS */
+#skills .container {
+  margin: 0;
+}
 
 #skills .hardSkills {
   padding: 3.625rem 2rem;
