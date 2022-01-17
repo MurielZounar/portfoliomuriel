@@ -429,7 +429,8 @@ nav div.icon-close:hover {
 
 /* PROGRESS */
 #skills .container {
-  margin: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 #skills .hardSkills {
