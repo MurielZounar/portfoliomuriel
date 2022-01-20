@@ -619,19 +619,66 @@ footer .social a:hover {
 
 /* BLOG */
 
-#metaverse .image {
-  width: 27rem;
+#programming .container {
+  margin: 0;
+}
+
+#programming .subtitle {
+  margin-left: 1rem;
+  text-decoration: underline;
+}
+
+#programming .image {
+  padding: 1rem;
+  width: 100%;
+}
+
+#programming .image img{
   height: auto;
 }
 
-#metaverse .subtitle {
-  text-decoration: underline;
-  margin-bottom: 1rem;
+#programming .image a{
+  color: var(--title-color);
 }
 
-#metaverse p a {
+#programming .text {
+  margin-left: 1rem;
+}
+
+#programming .text p {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+#onlineMeeting .container {
+  margin: 0;
+}
+
+#onlineMeeting .subtitle {
+  margin-left: 1rem;
+  text-decoration: underline;
+}
+
+#onlineMeeting .image {
+  padding: 1rem;
+  width: 100%;
+}
+
+#onlineMeeting .image img{
+  height: auto;
+}
+
+#onlineMeeting .image a{
   color: var(--title-color);
-  cursor: pointer;
+}
+
+#onlineMeeting .text {
+  margin-left: 1rem;
+}
+
+#onlineMeeting .text p {
+  max-width: 100%;
+  margin-bottom: 2rem;
 }
 
 /* ANIMATIONS */
