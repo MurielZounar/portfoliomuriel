@@ -650,6 +650,10 @@ footer .social a:hover {
   margin-bottom: 2rem;
 }
 
+#programming .text .contrast{
+  color: var(--title-color-second);
+}
+
 #onlineMeeting .container {
   margin: 0;
 }
@@ -679,6 +683,67 @@ footer .social a:hover {
 #onlineMeeting .text p {
   max-width: 100%;
   margin-bottom: 2rem;
+}
+
+#look .container {
+  margin: 0;
+}
+
+#look .subtitle {
+  margin-left: 1rem;
+  text-decoration: underline;
+}
+
+#look .image {
+  padding: 1rem;
+  width: 100%;
+}
+
+#look .image img{
+  height: auto;
+}
+
+#look .image a{
+  color: var(--title-color);
+}
+
+#look .text {
+  margin-left: 1rem;
+}
+
+#look .text p {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* FORM */
+
+#form .container {
+  margin: 0;
+}
+
+#form .text {
+  width: 100%;
+  padding: 1rem;
+}
+
+#form .text h2 {
+  width: 100%;
+}
+
+#form .text p {
+  width: 100%;
+}
+
+#form .video {
+  width: 100%;
+  
+}
+
+#form .video .videoForm {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
 }
 
 /* ANIMATIONS */
@@ -936,6 +1001,23 @@ footer .social a:hover {
     height: 100%;
     background: var(--base-color);
     border-radius: 0.375rem;
+  }
+
+  /* BLOG */
+
+  #programming .container {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #onlineMeeting .container {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #look .container {
+    margin: 0 auto;
+    align-items: center;
   }
 }
 

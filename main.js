@@ -45,6 +45,10 @@ scrollReveal.reveal(
    #academic .text,
    #professional .text, #professional .button,
    #skills .hardSkills, #skills .softSkills,
+   #programming .image, #programming .subtitle, #programming .text,
+   #onlineMeeting .image, #onlineMeeting .subtitle, #onlineMeeting .text,
+   #look .image, #look .subtitle, #look .text,
+   #form .text, #form .video,
    footer, footer .social, footer .copyright
   `,
   { interval: 100 }
