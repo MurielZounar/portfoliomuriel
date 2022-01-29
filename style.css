@@ -633,11 +633,11 @@ footer .social a:hover {
   width: 100%;
 }
 
-#programming .image img{
+#programming .image img {
   height: auto;
 }
 
-#programming .image a{
+#programming .image a {
   color: var(--title-color);
 }
 
@@ -650,7 +650,7 @@ footer .social a:hover {
   margin-bottom: 2rem;
 }
 
-#programming .text .contrast{
+#programming .text .contrast {
   color: var(--title-color-second);
 }
 
@@ -668,11 +668,11 @@ footer .social a:hover {
   width: 100%;
 }
 
-#onlineMeeting .image img{
+#onlineMeeting .image img {
   height: auto;
 }
 
-#onlineMeeting .image a{
+#onlineMeeting .image a {
   color: var(--title-color);
 }
 
@@ -699,11 +699,11 @@ footer .social a:hover {
   width: 100%;
 }
 
-#look .image img{
+#look .image img {
   height: auto;
 }
 
-#look .image a{
+#look .image a {
   color: var(--title-color);
 }
 
@@ -737,7 +737,6 @@ footer .social a:hover {
 
 #form .video {
   width: 100%;
-  
 }
 
 #form .video .videoForm {
@@ -1016,6 +1015,11 @@ footer .social a:hover {
   }
 
   #look .container {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  #form .container {
     margin: 0 auto;
     align-items: center;
   }
